@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pyra | Consejos de Ahorro de Agua</title>
+  <link rel="stylesheet" href="../estilos/estilos-consejos.css">
+</head>
+<body>
+
+  <!--
+    ===== VISTA: CONSEJOS (consejos.html) =====
+    FUNCION: catalogo de acciones practicas de ahorro de agua para casa y escuela.
+    COMPONENTES:
+      - Encabezado de navegacion (igual que en las demas vistas; 'Consejos' es el enlace activo)
+      - Cabecera: titulo + buscador (SOLO VISUAL, no busca nada)
+      - Filtros de categoria: Todos / Hogar / Escuela / Exterior (SOLO VISUAL, no filtran)
+      - 6 tarjetas de consejo: imagen, litros que se ahorran, titulo, descripcion, dificultad y enlace 'Guardar' (SIN FUNCION)
+      - Pie de pagina
+  -->
+
+  <header class="encabezado">
+    <nav class="barra-navegacion">
+
+      <a href="index.html" class="marca" title="PYRA · Purifica Y Reutiliza el Agua">
+        <span class="circulo-logo" aria-hidden="true">💧</span>
+        <span class="brand-text">
+          <span class="nombre-marca">PYRA</span>
+          <span class="lema-marca">Agua Sostenible</span>
+        </span>
+      </a>
+
+      <ul class="menu-principal">
+        <li><a href="index.html">🏠 Inicio</a></li>
+        <li><a href="consejos.html" class="enlace-activo">💡 Consejos</a></li>
+        <li><a href="calculadora.html">📊 Calculadora</a></li>
+      </ul>
+
+      <div class="botones-cuenta">
+        <a href="login.html" class="boton-iniciar">Iniciar Sesión</a>
+        <a href="registro.html" class="boton-registrar">Registrarse</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main class="contenido-principal">
+
+    <!-- encabezado de la pagina con un buscador que es solo visual -->
+    <div class="cabecera-consejos">
+      <div>
+        <span class="etiqueta-pequena">Tips Directos</span>
+        <h1>Consejos prácticos de ahorro</h1>
+        <p>Acciones sencillas para tu día a día en casa y en la escuela.</p>
+      </div>
+
+      <div class="caja-buscador">
+        <input type="text" placeholder="Buscar tip, ej. ducha, lavadora...">
+      </div>
+    </div>
+
+    <!-- botones de categoria son solo de apariencia no filtran nada -->
+    <div class="filtros-categoria">
+      <a href="#" class="boton-filtro filtro-elegido">Todos</a>
+      <a href="#" class="boton-filtro">Hogar</a>
+      <a href="#" class="boton-filtro">Escuela</a>
+      <a href="#" class="boton-filtro">Exterior</a>
+    </div>
+
+
+    <!-- tarjetas de consejos -->
+    <div class="cuadricula-consejos">
+
+      <!-- 1. Duchas -->
+      <div class="tarjeta-consejo">
+        <div class="cabecera-tarjeta">
+          <span class="circulo-consejo">
+            <img src="../imagenes/regadera.png" alt="Ducha" class="img-recuadro">
+          </span>
+          <span class="etiqueta-ahorro">Ahorro: 40-60 L/día</span>
+        </div>
+        <h3>Duchas de 5 minutos con playlist</h3>
+        <p>Pon una canción de 5 minutos. Báñate antes de que termine, evita tirar decenas de litros de agua.</p>
+        <div class="pie-tarjeta">
+          <span>Dificultad: <strong>Fácil</strong></span>
+          <a href="#" class="enlace-guardar">Guardar</a>
+        </div>
+      </div>
+
+      <!-- 2. Cubeta -->
+      <div class="tarjeta-consejo">
+        <div class="cabecera-tarjeta">
+          <span class="circulo-consejo">
+            <img src="../imagenes/cubeta.png" alt="Cubeta" class="img-recuadro">
+          </span>
+          <span class="etiqueta-ahorro">Ahorro: 10 L/ducha</span>
+        </div>
+        <h3>Cubeta para agua fría</h3>
+        <p>Mientras sale la caliente en la ducha, pon una cubeta debajo. Úsala para el inodoro o para regar plantas.</p>
+        <div class="pie-tarjeta">
+          <span>Dificultad: <strong>Muy fácil</strong></span>
+          <a href="#" class="enlace-guardar">Guardar</a>
+        </div>
+      </div>
+
+      <!-- 3. Lavadora -->
+      <div class="tarjeta-consejo">
+        <div class="cabecera-tarjeta">
+          <span class="circulo-consejo">
+            <img src="../imagenes/lavadora.png" alt="Lavadora" class="img-recuadro">
+          </span>
+          <span class="etiqueta-ahorro">Ahorro: 60 L/ciclo</span>
+        </div>
+        <h3>Agua de lavadora para limpieza</h3>
+        <p>Recoge el agua del último ciclo de enjuague de la lavadora para lavar el patio o trapear.</p>
+        <div class="pie-tarjeta">
+          <span>Dificultad: <strong>Media</strong></span>
+          <a href="#" class="enlace-guardar">Guardar</a>
+        </div>
+      </div>
+
+      <!-- 4. Fugas -->
+      <div class="tarjeta-consejo">
+        <div class="cabecera-tarjeta">
+          <span class="circulo-consejo">
+            <img src="../imagenes/fuga-agua-proyecto.jpg" alt="Fugas de agua" class="img-recuadro">
+          </span>
+          <span class="etiqueta-ahorro">Ahorro: 50 L/día</span>
+        </div>
+        <h3>Reporta fugas en la escuela</h3>
+        <p>Un inodoro con goteo constante tira agua sin parar. Avisa a mantenimiento de tu escuela de inmediato.</p>
+        <div class="pie-tarjeta">
+          <span>Dificultad: <strong>Fácil</strong></span>
+          <a href="#" class="enlace-guardar">Guardar</a>
+        </div>
+      </div>
+
+      <!-- 5. Termo -->
+      <div class="tarjeta-consejo">
+        <div class="cabecera-tarjeta">
+          <span class="circulo-consejo">
+            <img src="../imagenes/termo.png" alt="Termo recargable" class="img-recuadro">
+          </span>
+          <span class="etiqueta-ahorro">Ahorro: 5 L/día</span>
+        </div>
+        <h3>Lleva tu termo recargable</h3>
+        <p>Lleva tu propia botella de agua a la escuela y evita tirar los sobrantes de vasos desechables.</p>
+        <div class="pie-tarjeta">
+          <span>Dificultad: <strong>Muy fácil</strong></span>
+          <a href="#" class="enlace-guardar">Guardar</a>
+        </div>
+      </div>
+
+      <!-- 6. Riego -->
+      <div class="tarjeta-consejo">
+        <div class="cabecera-tarjeta">
+          <span class="circulo-consejo">
+            <img src="../imagenes/regado.png" alt="Riego" class="img-recuadro">
+          </span>
+          <span class="etiqueta-ahorro">Ahorro: 25 L/riego</span>
+        </div>
+        <h3>Riego al anochecer</h3>
+        <p>Riega las plantas cuando baje el sol para evitar que el calor evapore el agua al instante.</p>
+        <div class="pie-tarjeta">
+          <span>Dificultad: <strong>Fácil</strong></span>
+          <a href="#" class="enlace-guardar">Guardar</a>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer class="pie-pagina">
+    <div class="contenedor-pie">
+      <div class="marca-pie">
+        <span class="circulo-logo" aria-hidden="true">💧</span>
+        <span class="nombre-marca">PYRA · Purifica Y Reutiliza el Agua</span>
+      </div>
+      <p class="texto-copyright">© 2026 Pyra Initiative — Concientización hídrica escolar</p>
+    </div>
+  </footer>
+
+</body>
+</html>

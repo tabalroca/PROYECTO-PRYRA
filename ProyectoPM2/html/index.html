@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pyra | Purificación y Reutilización del Agua</title>
+
+  <!-- cada ventana del sitio tiene su propia hoja de estilos -->
+  <link rel="stylesheet" href="../estilos/estilos-inicio.css">
+</head>
+<body>
+
+  <!--
+    ===== VISTA: INICIO (index.html) =====
+    FUNCION: pagina de bienvenida. Presenta el tema (ahorro y reutilizacion de agua) y dirige al usuario a la calculadora.
+    COMPONENTES:
+      - Encabezado: logo PYRA + menu (Inicio, Consejos, Calculadora) + botones Iniciar Sesion / Registrarse (solo enlaces a otras vistas)
+      - Seccion de bienvenida: titulo, autor, texto introductorio y boton grande hacia calculadora.html
+      - Tarjetas de desperdicio: 4 datos informativos (litros perdidos en situaciones comunes)
+      - Aviso verde: tip sobre captacion de agua de lluvia
+      - Tabla de clasificacion del agua: potable, gris, negra y pluvial con origen, contaminacion y usos
+      - Pie de pagina: marca y copyright
+  -->
+
+  <!-- encabezado con el logo y el menu de navegacion -->
+  <!-- esta misma estructura se repite en consejos.html, calculadora.html y registro.html -->
+  <header class="encabezado">
+    <nav class="barra-navegacion">
+
+      <a href="index.html" class="marca" title="PYRA · Purifica Y Reutiliza el Agua">
+        <span class="circulo-logo" aria-hidden="true">💧</span>
+        <span class="brand-text">
+          <span class="nombre-marca">PYRA</span>
+          <span class="lema-marca">Agua Sostenible</span>
+        </span>
+      </a>
+
+      <ul class="menu-principal">
+        <li><a href="index.html" class="enlace-activo">🏠 Inicio</a></li>
+        <li><a href="consejos.html">💡 Consejos</a></li>
+        <li><a href="calculadora.html">📊 Calculadora</a></li>
+      </ul>
+
+      <div class="botones-cuenta">
+        <a href="login.html" class="boton-iniciar">Iniciar Sesión</a>
+        <a href="registro.html" class="boton-registrar">Registrarse</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main class="contenido-principal">
+
+    <!-- seccion principal de bienvenida con el tema del proyecto -->
+    <section class="seccion-bienvenida">
+      <span class="etiqueta-pequena">Conciencia Ambiental Real</span>
+      <h1>El agua potable no es infinita. <span class="texto-destacado">¿Sabes cuánta usas hoy?</span></h1>
+      <p class="autor-proyecto">Por: Morales Castillo Omar Sait</p>
+      <p>
+        La escasez de agua afecta a millones de personas. El agua que usamos en duchas y
+        lavadoras (llamada agua gris) puede tener una segunda vida antes de irse al drenaje.
+        Descubre cómo pequeñas acciones diarias reducen tu impacto hídrico.
+      </p>
+      <a href="calculadora.html" class="boton-grande">Calcula tu Huella Hídrica Ahora</a>
+    </section>
+
+
+    <!-- seccion con tarjetas que muestran ejemplos de desperdicio de agua en casa -->
+    <section>
+      <div class="titulo-seccion">
+        <h2>El desperdicio invisible en casa</h2>
+        <p>Gasto de agua cotidiano que podemos evitar fácilmente.</p>
+      </div>
+
+      <div class="cuadricula-tarjetas">
+
+        <div class="tarjeta">
+          <p class="numero-grande">5 a 10 L</p>
+          <h3>Esperando agua caliente</h3>
+          <p>Agua limpia que se pierde por la coladera antes de entrar a la ducha.</p>
+        </div>
+
+        <div class="tarjeta">
+          <p class="numero-grande">40 a 100 L</p>
+          <h3>Ciclo de lavadora</h3>
+          <p>El agua de los últimos enjuagues se puede reutilizar para trapear o en el inodoro.</p>
+        </div>
+
+        <div class="tarjeta">
+          <p class="numero-grande">200 L o más</p>
+          <h3>Lavado con manguera</h3>
+          <p>Dejar la manguera abierta al lavar autos o patios desperdicia cientos de litros.</p>
+        </div>
+
+        <div class="tarjeta">
+          <p class="numero-grande">12 L por minuto</p>
+          <h3>Grifos abiertos</h3>
+          <p>Dejar el grifo abierto mientras te cepillas o lavas platos es una fuga continua.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- aviso con un consejo extra sobre la captacion de agua de lluvia -->
+    <section class="aviso-verde">
+      <h3>🌧️ Tip Pyra: Captación de Agua de Lluvia</h3>
+      <p>
+        Regla de los primeros 10 minutos: cuando empiece a llover deja correr los
+        primeros 10 minutos para que la lluvia limpie el polvo del techo. Después,
+        junta el agua en contenedores limpios con tapa; es perfecta para regar
+        plantas y limpiar sin gastar agua potable.
+      </p>
+    </section>
+
+
+    <!-- tabla que clasifica los tipos de agua y su uso recomendado -->
+    <section>
+      <div class="titulo-seccion">
+        <h2>Clasificación del agua</h2>
+        <p>Conoce qué tipo de agua se puede reutilizar y cuál requiere tratamiento.</p>
+      </div>
+
+      <div class="caja-tabla">
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Origen</th>
+              <th>Contaminación</th>
+              <th>Usos recomendados</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="dato-fila">Agua potable</td>
+              <td>Red pública purificada</td>
+              <td><span class="etiqueta-nivel nivel-bajo">Nula (segura)</span></td>
+              <td>Beber, cocinar e higiene personal</td>
+            </tr>
+            <tr>
+              <td class="dato-fila">Aguas grises</td>
+              <td>Duchas, lavabos y lavadoras</td>
+              <td><span class="etiqueta-nivel nivel-medio">Baja / moderada</span></td>
+              <td>Descarga de inodoros, riego y patios</td>
+            </tr>
+            <tr>
+              <td class="dato-fila">Aguas negras</td>
+              <td>Inodoros y drenaje con materia orgánica</td>
+              <td><span class="etiqueta-nivel nivel-alto">Alta (riesgo)</span></td>
+              <td>Ninguno directo sin planta de tratamiento</td>
+            </tr>
+            <tr>
+              <td class="dato-fila">Agua pluvial</td>
+              <td>Lluvia captada en techos limpios</td>
+              <td><span class="etiqueta-nivel nivel-bajo">Muy baja</span></td>
+              <td>Riego de plantas, limpieza de piso y ropa</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- pie de pagina con los datos del proyecto -->
+  <footer class="pie-pagina">
+    <div class="contenedor-pie">
+      <div class="marca-pie">
+        <span class="circulo-logo" aria-hidden="true">💧</span>
+        <span class="nombre-marca">PYRA · Purifica Y Reutiliza el Agua</span>
+      </div>
+      <p class="texto-copyright">© 2026 Pyra Initiative — Concientización hídrica escolar</p>
+    </div>
+  </footer>
+
+</body>
+</html>

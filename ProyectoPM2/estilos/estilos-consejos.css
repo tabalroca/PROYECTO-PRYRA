@@ -1,0 +1,146 @@
+/* =====================================================
+   estilos-consejos.css
+   hoja de estilos EXCLUSIVA de consejos.html
+   ===================================================== */
+
+:root {
+  --azul-oscuro: #0f4c81;
+  --azul-turquesa: #2a9d8f;
+  --fondo-claro: #f8f9fa;
+  --verde-eco: #2e7d32;
+  --verde-claro: #e8f5e9;
+  --menta-fondo: #e3f6f4;
+  --naranja: #f4a261;
+  --naranja-oscuro: #e76f51;
+  --texto-oscuro: #1d3557;
+  --texto-claro: #ffffff;
+  --gris-borde: #dcdcdc;
+  --gris-texto: #5a6b7a;
+  --radio-borde: 12px;
+  --radio-pill: 50px;
+  --sombra-caja: 0 3px 10px rgba(15, 76, 129, 0.10);
+  --fuente-base: -apple-system, "Segoe UI", Roboto, Verdana, Geneva, sans-serif;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: var(--fuente-base);
+  background-color: var(--fondo-claro);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; }
+
+/* ============ encabezado y navegacion (igual en todas las ventanas) ============ */
+.encabezado { background-color: #ffffff; padding: 14px 30px; border-bottom: 1px solid var(--gris-borde); position: sticky; top: 0; z-index: 20; }
+.barra-navegacion { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; max-width: 1100px; margin: 0 auto; }
+.marca { display: flex; align-items: center; gap: 10px; }
+.circulo-logo { width: 40px; height: 40px; flex-shrink: 0; background: linear-gradient(135deg, var(--azul-turquesa), var(--azul-oscuro)); color: var(--texto-claro); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 19px; }
+.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+.nombre-marca { color: var(--texto-oscuro); font-size: 20px; font-weight: 800; letter-spacing: .5px; }
+.lema-marca { color: var(--azul-turquesa); font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.menu-principal { list-style: none; display: flex; gap: 4px; flex-wrap: wrap; }
+.menu-principal a { display: inline-flex; align-items: center; gap: 6px; color: var(--gris-texto); font-weight: 600; font-size: 14px; padding: 8px 16px; border-radius: var(--radio-pill); border: 1px solid transparent; }
+.menu-principal a:hover { background-color: #f1f5f4; color: var(--texto-oscuro); }
+.enlace-activo, .enlace-activo:hover { background-color: var(--menta-fondo) !important; color: var(--azul-turquesa) !important; border-color: rgba(42, 157, 143, .35) !important; font-weight: 700; }
+.botones-cuenta { display: flex; gap: 10px; flex-wrap: wrap; }
+.boton-iniciar { background-color: transparent; border: 1px solid var(--gris-borde); color: var(--texto-oscuro); padding: 8px 18px; border-radius: var(--radio-pill); font-size: 13px; font-weight: 700; }
+.boton-iniciar:hover { background-color: #f1f5f4; }
+.boton-registrar { background-color: var(--naranja); color: var(--texto-claro); padding: 8px 18px; border-radius: var(--radio-pill); font-size: 13px; font-weight: 700; box-shadow: 0 3px 8px rgba(244, 162, 97, .4); }
+.boton-registrar:hover { background-color: var(--naranja-oscuro); }
+@media (max-width: 820px) {
+  .barra-navegacion { flex-direction: column; align-items: flex-start; }
+  .menu-principal { width: 100%; }
+  .botones-cuenta { width: 100%; }
+}
+
+/* ============ contenedor general ============ */
+.contenido-principal { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+
+/* ============ cabecera de la pagina de consejos ============ */
+.cabecera-consejos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-bottom: 1px solid var(--gris-borde);
+  padding-bottom: 22px;
+  margin-bottom: 26px;
+}
+.cabecera-consejos h1 { font-size: 28px; font-weight: 800; margin-bottom: 6px; color: var(--texto-oscuro); }
+.cabecera-consejos > div > p { color: var(--gris-texto); font-size: 14px; }
+.etiqueta-pequena {
+  display: inline-block;
+  background-color: var(--menta-fondo);
+  border: 1px solid rgba(42, 157, 143, .35);
+  color: var(--azul-turquesa);
+  padding: 5px 16px;
+  border-radius: var(--radio-pill);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.caja-buscador input {
+  width: 260px;
+  max-width: 100%;
+  padding: 11px 16px;
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radio-pill);
+  font-size: 13px;
+  background-color: #ffffff;
+}
+.caja-buscador input:focus { outline: 2px solid var(--azul-turquesa); outline-offset: 1px; }
+
+/* ============ filtros de categoria ============ */
+.filtros-categoria { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+.boton-filtro {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: var(--radio-pill);
+  border: 1px solid var(--gris-borde);
+  background-color: var(--texto-claro);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--texto-oscuro);
+}
+.boton-filtro:hover { background-color: #f1f5f4; }
+.filtro-elegido, .filtro-elegido:hover { background-color: var(--texto-oscuro); color: var(--texto-claro); border-color: var(--texto-oscuro); }
+
+/* ============ tarjetas de consejos ============ */
+.cuadricula-consejos { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.tarjeta-consejo {
+  background-color: var(--texto-claro);
+  border-radius: var(--radio-borde);
+  padding: 22px;
+  box-shadow: var(--sombra-caja);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .15s ease;
+}
+.tarjeta-consejo:hover { transform: translateY(-3px); }
+.cabecera-tarjeta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.circulo-consejo { width: 79px; height: 50px; border-radius: 10px; background-color: var(--verde-claro); color: var(--verde-eco); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px;  overflow: hidden; }
+.img-recuadro { width: 100%; height: 100%; object-fit: cover; }
+.etiqueta-ahorro { background-color: var(--verde-claro); color: #1b5e20; font-size: 10px; font-weight: 700; text-transform: uppercase; padding: 5px 11px; border-radius: var(--radio-pill); }
+.tarjeta-consejo h3 { font-size: 15px; margin-bottom: 8px; color: var(--texto-oscuro); font-weight: 700; }
+.tarjeta-consejo p { font-size: 13px; color: var(--gris-texto); margin-bottom: 14px; }
+.pie-tarjeta { border-top: 1px solid #eee; padding-top: 12px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; font-weight: 600; color: var(--gris-texto); }
+.enlace-guardar { color: var(--azul-turquesa); font-weight: 700; }
+
+/* ============ pie de pagina ============ */
+.pie-pagina { background-color: #0a2540; color: var(--texto-claro); padding: 26px 30px; margin-top: 40px; }
+.contenedor-pie { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.marca-pie { display: flex; align-items: center; gap: 10px; }
+.marca-pie .circulo-logo { width: 34px; height: 34px; font-size: 15px; }
+.marca-pie .nombre-marca { color: #ffffff; font-size: 16px; }
+.texto-copyright { font-size: 12px; color: #94a3b8; }

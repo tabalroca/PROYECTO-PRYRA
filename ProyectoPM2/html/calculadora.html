@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pyra | Calculadora de Huella Hídrica</title>
+  <link rel="stylesheet" href="../estilos/estilos-calculadora.css">
+</head>
+<body>
+
+  <!--
+    ===== VISTA: CALCULADORA (calculadora.html) =====
+    FUNCION: maqueta del test interactivo de huella hidrica. Muestra como se veria la captura de datos y el resultado.
+    COMPONENTES:
+      - Encabezado de navegacion ('Calculadora' es el enlace activo)
+      - Formulario con 4 controles deslizantes: minutos de ducha, cargas de lavadora, minutos de trastes e inodoro (los valores mostrados son fijos, NO se actualizan)
+      - Boton 'Calcular Mi Consumo' (SIN FUNCION: no calcula)
+      - Panel de resultado en estado vacio: litros/dia '--', proyeccion mensual '--', escala Bajo/Medio/Alto, barra de nivel y mensaje inicial
+      - Enlace a Consejos de Ahorro
+      - Pie de pagina
+  -->
+
+  <!-- mismo encabezado que las demas paginas  cambia solo el enlace activo -->
+  <header class="encabezado">
+    <nav class="barra-navegacion">
+
+      <a href="index.html" class="marca" title="PYRA · Purifica Y Reutiliza el Agua">
+        <span class="circulo-logo" aria-hidden="true">💧</span>
+        <span class="brand-text">
+          <span class="nombre-marca">PYRA</span>
+          <span class="lema-marca">Agua Sostenible</span>
+        </span>
+      </a>
+
+      <ul class="menu-principal">
+        <li><a href="index.html">🏠 Inicio</a></li>
+        <li><a href="consejos.html">💡 Consejos</a></li>
+        <li><a href="calculadora.html" class="enlace-activo">📊 Calculadora</a></li>
+      </ul>
+
+      <div class="botones-cuenta">
+        <a href="login.html" class="boton-iniciar">Iniciar Sesión</a>
+        <a href="registro.html" class="boton-registrar">Registrarse</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main class="contenido-principal">
+
+    <div class="titulo-seccion">
+      <span class="etiqueta-pequena">Test Interactivo</span>
+      <h1>Calculadora de huella hídrica</h1>
+      <p>
+        Ajusta los valores con tu rutina diaria para hacerte una idea de tu
+        consumo de agua. Esta es solo una maqueta visual de cómo se vería la calculadora.
+      </p>
+    </div>
+
+    <div class="diseno-calculadora">
+
+      <!-- formulario con los datos que pediria la calculadora -->
+      <!-- nota  los controles no calculan nada porque el proyecto solo pide maquetacion -->
+      <form class="caja-formulario" action="#" method="get">
+
+        <div class="grupo-pregunta">
+          <div class="fila-pregunta">
+            <label for="pregunta-ducha">Ducha diaria (minutos)</label>
+            <span class="valor-actual">10 min</span>
+          </div>
+          <input type="range" id="pregunta-ducha" name="ducha" min="1" max="30" value="10">
+          <p class="texto-pista">Estimación: 12 litros por minuto de regadera.</p>
+        </div>
+
+        <div class="grupo-pregunta">
+          <div class="fila-pregunta">
+            <label for="pregunta-lavadora">Cargas de lavadora a la semana</label>
+            <span class="valor-actual">4 cargas</span>
+          </div>
+          <input type="range" id="pregunta-lavadora" name="lavadora" min="0" max="15" value="4">
+          <p class="texto-pista">Aproximadamente 60 litros por ciclo.</p>
+        </div>
+
+        <div class="grupo-pregunta">
+          <div class="fila-pregunta">
+            <label for="pregunta-trastes">Lavado de trastes (minutos grifo abierto/día)</label>
+            <span class="valor-actual">15 min</span>
+          </div>
+          <input type="range" id="pregunta-trastes" name="trastes" min="0" max="45" value="15">
+        </div>
+
+        <div class="grupo-pregunta">
+          <div class="fila-pregunta">
+            <label for="pregunta-inodoro">Descargas de inodoro al día</label>
+            <span class="valor-actual">5 veces</span>
+          </div>
+          <input type="range" id="pregunta-inodoro" name="inodoro" min="1" max="15" value="5">
+        </div>
+
+        <button type="submit" class="boton-calcular">Calcular Mi Consumo</button>
+      </form>
+
+
+      <!-- panel donde se mostraria el resultado  estado inicial vacio igual que en la maqueta -->
+      <div class="panel-resultado">
+        <p class="etiqueta-resultado">Tu consumo estimado</p>
+
+        <p class="numero-resultado">--
+          <span class="unidad-resultado">Litros de agua / día</span>
+        </p>
+
+        <span class="mensual-resultado">Proyección mensual: -- L</span>
+
+        <div class="escala-niveles">
+          <span class="bajo">Bajo (&lt;120L)</span>
+          <span class="medio">Medio</span>
+          <span class="alto">Alto (&gt;250L)</span>
+        </div>
+        <div class="barra-nivel">
+          <div class="relleno-barra"></div>
+        </div>
+
+        <div class="mensaje-nivel">
+          <span aria-hidden="true">💡</span>
+          <div>
+            <strong>Ingresa tus datos</strong>
+            <p>Haz clic en "Calcular Mi Consumo" para ver el análisis de tu huella hídrica.</p>
+          </div>
+        </div>
+
+        <a href="consejos.html" class="enlace-consejos">→ Ver Consejos de Ahorro</a>
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <footer class="pie-pagina">
+    <div class="contenedor-pie">
+      <div class="marca-pie">
+        <span class="circulo-logo" aria-hidden="true">💧</span>
+        <span class="nombre-marca">PYRA · Purifica Y Reutiliza el Agua</span>
+      </div>
+      <p class="texto-copyright">© 2026 Pyra Initiative — Concientización hídrica escolar</p>
+    </div>
+  </footer>
+
+</body>
+</html>

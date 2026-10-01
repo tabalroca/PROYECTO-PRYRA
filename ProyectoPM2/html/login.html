@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pyra | Iniciar Sesión</title>
+  <link rel="stylesheet" href="../estilos/estilos-login.css">
+</head>
+<body>
+
+  <!--
+    ===== VISTA: INICIAR SESION (login.html) =====
+    FUNCION: pantalla de acceso para usuarios con cuenta. Es solo maqueta: no valida ni envia datos.
+    COMPONENTES:
+      - Layout de dos paneles (no usa el encabezado normal)
+      - Panel izquierdo: enlace 'Volver al Inicio', logo, nombre del proyecto, frase y copyright
+      - Panel derecho: formulario con correo y contrasena + boton 'Entrar' (SIN FUNCION)
+      - Enlace a registro.html para quienes no tienen cuenta
+  -->
+
+  <!-- esta pagina no lleva el encabezado normal  tiene su propio diseño dividido en dos paneles -->
+  <div class="pagina-acceso">
+
+    <!-- panel izquierdo con informacion y el boton para volver -->
+    <div class="panel-informativo">
+
+      <a href="index.html" class="enlace-volver">← Volver al Inicio</a>
+
+      <div>
+        <div class="marca" title="PYRA · Purifica Y Reutiliza el Agua">
+          <span class="circulo-logo" aria-hidden="true">💧</span>
+          <span class="nombre-marca">PYRA</span>
+        </div>
+
+        <h2>Purificación y Reutilización del Agua</h2>
+
+        <p class="frase-cita">
+          "Cada gota cuenta. Accede para calcular, gestionar y preservar el recurso
+          hídrico de nuestro planeta."
+        </p>
+      </div>
+
+      <p class="texto-copyright">© 2026 Pyra Initiative.</p>
+    </div>
+
+
+    <!-- panel derecho con el formulario para iniciar sesion -->
+    <div class="panel-formulario-acceso">
+      <div class="caja-formulario-acceso">
+
+        <div class="titulo-formulario">
+          <h1>¡Hola de nuevo!</h1>
+          <p>Ingresa con tu correo y contraseña.</p>
+        </div>
+
+        <!-- el formulario no envia datos a ningun lado  es solo la maqueta visual -->
+        <form action="#" method="get">
+
+          <div class="campo-formulario">
+            <label for="correo-login">Correo electrónico</label>
+            <input type="email" id="correo-login" name="correo" placeholder="tu@correo.com">
+          </div>
+
+          <div class="campo-formulario">
+            <label for="clave-login">Contraseña</label>
+            <input type="password" id="clave-login" name="clave" placeholder="Escribe tu contraseña">
+          </div>
+
+          <button type="submit" class="boton-enviar">Entrar</button>
+        </form>
+
+        <p class="texto-enlace">
+          ¿Aún no tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

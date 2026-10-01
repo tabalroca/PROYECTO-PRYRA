@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pyra | Crear Cuenta</title>
+  <link rel="stylesheet" href="../estilos/estilos-registro.css">
+</head>
+<body>
+
+  <!--
+    ===== VISTA: REGISTRO (registro.html) =====
+    FUNCION: pantalla para crear una cuenta nueva. Solo maqueta: no guarda datos.
+    COMPONENTES:
+      - Encabezado de navegacion con los botones de cuenta
+      - Caja de formulario: nombre completo, correo y contrasena + boton 'Registrarme' (SIN FUNCION)
+      - Enlace a login.html para quienes ya tienen cuenta
+      - Pie de pagina
+  -->
+
+  <!-- esta pagina si usa el mismo encabezado que las paginas principales -->
+  <header class="encabezado">
+    <nav class="barra-navegacion">
+
+      <a href="index.html" class="marca" title="PYRA · Purifica Y Reutiliza el Agua">
+        <span class="circulo-logo" aria-hidden="true">💧</span>
+        <span class="brand-text">
+          <span class="nombre-marca">PYRA</span>
+          <span class="lema-marca">Agua Sostenible</span>
+        </span>
+      </a>
+
+      <ul class="menu-principal">
+        <li><a href="index.html">🏠 Inicio</a></li>
+        <li><a href="consejos.html">💡 Consejos</a></li>
+        <li><a href="calculadora.html">📊 Calculadora</a></li>
+      </ul>
+
+      <div class="botones-cuenta">
+        <a href="login.html" class="boton-iniciar">Iniciar Sesión</a>
+        <a href="registro.html" class="boton-registrar">Registrarse</a>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main class="contenido-principal">
+
+    <div class="caja-formulario-acceso">
+
+      <div class="titulo-formulario">
+        <h1>Crea tu cuenta</h1>
+        <p>Únete a la comunidad Pyra y guarda tus métricas.</p>
+      </div>
+
+      <!-- formulario de registro  igual que el de login no envia datos a ningun servidor -->
+      <form action="#" method="get">
+
+        <div class="campo-formulario">
+          <label for="nombre-registro">Nombre completo</label>
+          <input type="text" id="nombre-registro" name="nombre" placeholder="Tu nombre">
+        </div>
+
+        <div class="campo-formulario">
+          <label for="correo-registro">Correo electrónico</label>
+          <input type="email" id="correo-registro" name="correo" placeholder="correo@ejemplo.com">
+        </div>
+
+        <div class="campo-formulario">
+          <label for="clave-registro">Contraseña</label>
+          <input type="password" id="clave-registro" name="clave" placeholder="Escribe tu contraseña">
+        </div>
+
+        <button type="submit" class="boton-enviar">Registrarme</button>
+      </form>
+
+      <p class="texto-enlace">
+        ¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a>
+      </p>
+
+    </div>
+
+  </main>
+
+
+  <footer class="pie-pagina">
+    <div class="contenedor-pie">
+      <div class="marca-pie">
+        <span class="circulo-logo" aria-hidden="true">💧</span>
+        <span class="nombre-marca">PYRA · Purifica Y Reutiliza el Agua</span>
+      </div>
+      <p class="texto-copyright">© 2026 Pyra Initiative — Concientización hídrica escolar</p>
+    </div>
+  </footer>
+
+</body>
+</html>
